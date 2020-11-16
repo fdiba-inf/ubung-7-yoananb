@@ -1,3 +1,4 @@
+  
 package exercise7;
 
 import java.util.Scanner;
@@ -12,19 +13,29 @@ public class TimeValidation {
         System.out.print("Enter minutes: ");
         int minutes = input.nextInt();
 
-        boolean timeValid = false; // Call validation methods
+        boolean timeValid = areHoursValid(hours) && areMinutesValid(minutes); 
         System.out.println("Time valid: " + timeValid);
     }
 
 
     public static boolean areHoursValid(int hours) {
-        // Implement method
-        return false;
+        
+          if(hours<24 && hours>=0){
+            return true;
+          }else{
+            return false;
+          }
+        
+        
     }
 
 
     public static boolean areMinutesValid(int minutes) {
-        // Implement method
-        return false;
+        if(minutes<60 && minutes>=0){
+          return true;
+        } else{
+         return false;
+        }
+        
     }
 }
